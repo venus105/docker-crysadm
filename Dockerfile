@@ -23,9 +23,9 @@ RUN git clone https://github.com/venus105/Crysadm.git
 #RUN echo '0 * * * * root sh /app/crysadm/run.sh' >> /etc/crontab
 
 #安装python，redis
-RUN apt-get install -y python3.7 python3.7-dev redis-server
+RUN apt-get install -y python3.4 python3.4-dev redis-server
 RUN chmod +x ./crysadm/get-pip.py
-RUN python3.7 ./crysadm/get-pip.py
+RUN python3.4 ./crysadm/get-pip.py
 RUN pip3.4 install redis && sudo pip3.4 install requests && sudo pip3.4 install flask
 
 #复制配置文件
